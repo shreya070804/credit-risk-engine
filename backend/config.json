@@ -1,0 +1,23 @@
+{
+  "model_version": "v1",
+
+  "risk_strategies": {
+    "Conservative": {
+      "approve_threshold": 0.25,
+      "review_threshold": 0.45
+    },
+    "Balanced": {
+      "approve_threshold": 0.30,
+      "review_threshold": 0.60
+    },
+    "Aggressive": {
+      "approve_threshold": 0.40,
+      "review_threshold": 0.70
+    }
+  },
+
+  "fairness": {
+    "min_records": 30,
+    "max_approval_gap": 0.25
+  }
+}

@@ -1,0 +1,19 @@
+timestamp,income,age,loan_amount,credit_utilization,late_payments,employment_years,pd,decision,model_version,risk_strategy,borderline_case,model_decision,final_decision,override_used,override_reason
+2026-01-11 00:17:48,0.0,18.0,0.0,0.5,0.0,0.0,0.006,APPROVE,,,,,,,
+2026-01-11 19:40:53,,,,,,,0.006,APPROVE,v1,Conservative,False,,,,
+2026-01-11 19:46:18,,,,,,,0.006,,v1,Conservative,False,APPROVE,APPROVE,False,N/A
+2026-01-11 19:59:06,v1,Balanced,0.006,APPROVE,APPROVE,False,N/A,"RC04, RC05"
+2026-01-11 19:59:10,v1,Balanced,0.006,APPROVE,APPROVE,False,N/A,"RC04, RC05"
+2026-01-11 19:59:13,v1,Balanced,0.006,APPROVE,APPROVE,False,N/A,"RC04, RC05"
+2026-01-12 00:51:00,0,18,0,0.5,0,0,0.006,APPROVE,0
+a6b3c848,2026-01-12 01:18:12,v1,Conservative,0.006,APPROVE,0
+ef44b094,2026-01-12 01:21:29,v1,Conservative,0.006,APPROVE,0
+938037b8,2026-01-12 01:21:37,v1,Conservative,0.006,APPROVE,0
+a6264d7f,2026-01-12 01:27:23,Analyst,Balanced,0.006,APPROVE,APPROVE,False,N/A,0
+76b7c372,2026-01-12 23:35:10,Analyst,Balanced,0.006,APPROVE,APPROVE,False,N/A,0
+65f2ee51,2026-01-13 00:39:20,0,18,0,0.5,0,0,0.006,APPROVE,APPROVE,False,N/A
+acbcbd05,2026-01-13 00:47:37,0.006,APPROVE
+fb7d5bdb,2026-01-13 00:47:48,0.006,APPROVE
+2026-01-13 01:03:53,0.006,APPROVE
+f9daffae,2026-01-13 01:10:20,0.006,APPROVE
+a155fd26,2026-01-13 01:20:49,0.006,APPROVE

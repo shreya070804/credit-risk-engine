@@ -1,0 +1,1 @@
+income,age,loan_amount,credit_utilization,late_payments,employment_years,default

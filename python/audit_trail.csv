@@ -1,0 +1,2 @@
+decision_id,timestamp,user_role,risk_strategy,model_version,pd,model_decision,final_decision,override_used,override_reason,default
+35049495,2026-01-12 01:11:56,Analyst,Balanced,v1,0.006,APPROVE,APPROVE,False,N/A,0
