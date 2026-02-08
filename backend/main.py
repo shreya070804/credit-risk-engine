@@ -16,13 +16,15 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+# ================= PATHS =================
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 MODEL_PATH = os.path.join(BASE_DIR, "credit_risk_model_v1.pkl")
 LOG_FILE = os.path.join(BASE_DIR, "audit_log.csv")
 
+# ================= LOAD MODEL =================
 model = joblib.load(MODEL_PATH)
 
-# ================= MODELS =================
+# ================= REQUEST MODEL =================
 class Applicant(BaseModel):
     income: float
     age: int
@@ -32,8 +34,8 @@ class Applicant(BaseModel):
     credit_utilization: float
     risk_mode: str
 
-# ================= EXPLANATION LOGIC =================
-def generate_explanation(data):
+# ================= EXPLANATION =================
+def generate_explanation(data: Applicant):
     reasons = []
 
     if data.credit_utilization > 0.6:
@@ -61,7 +63,7 @@ def root():
 # ================= PREDICT =================
 @app.post("/predict")
 def predict(payload: Applicant):
-    X = pd.DataFrame([[ 
+    X = pd.DataFrame([[
         payload.income,
         payload.age,
         payload.loan_amount,
@@ -79,11 +81,12 @@ def predict(payload: Applicant):
 
     pd_value = float(model.predict_proba(X)[0][1])
 
+    # Risk thresholds
     if payload.risk_mode == "Conservative":
         approve, review = 0.25, 0.45
     elif payload.risk_mode == "Aggressive":
         approve, review = 0.40, 0.70
-    else:
+    else:  # Standard
         approve, review = 0.30, 0.60
 
     if pd_value < approve:
@@ -93,6 +96,7 @@ def predict(payload: Applicant):
     else:
         decision = "REJECT"
 
+    # ===== SINGLE, SAFE LOGGING (IMPORTANT) =====
     log_row = {
         "timestamp": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
         "pd": round(pd_value, 4),

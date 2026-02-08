@@ -1,4 +1,11 @@
-timestamp,income,age,loan_amount,employment_years,late_payments,credit_utilization,pd,decision,risk_mode
-2026-01-31 02:31:40,300000.0,24,900000.0,1,5,0.92,0.9891,REJECT,Aggressive
-2026-01-31 02:32:36,9000000.0,24,300000.0,3,2,0.92,0.8926,REJECT,Balanced
-2026-02-01 01:03:53,0.82,REJECT,Aggressive
+timestamp,pd,decision,mode
+2026-02-02 00:04:28,0.001,APPROVE,Standard
+2026-02-02 00:04:29,0.001,APPROVE,Standard
+2026-02-02 00:04:29,0.001,APPROVE,Standard
+2026-02-02 00:04:29,0.001,APPROVE,Standard
+2026-02-02 00:04:30,0.001,APPROVE,Standard
+2026-02-02 00:04:30,0.001,APPROVE,Standard
+2026-02-02 00:04:48,0.0,APPROVE,Standard
+2026-02-02 00:04:58,0.0,APPROVE,Standard
+2026-02-02 00:05:07,1.0,REJECT,Standard
+2026-02-02 00:23:43,0.0,APPROVE,Standard
